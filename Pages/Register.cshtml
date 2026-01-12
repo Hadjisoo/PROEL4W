@@ -1,0 +1,39 @@
+﻿@page
+@model PROEL4W.Pages.RegisterModel
+@{
+}
+<h2>Create Account</h2>
+
+<form method="post">
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.Name)
+        @Html.TextBoxFor(m => m.User.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.User.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.Age)
+        @Html.TextBoxFor(m => m.User.Age, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(m => m.User.Age, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.Email)
+        @Html.TextBoxFor(m => m.User.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.User.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.Password)
+        @Html.PasswordFor(m => m.User.Password, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.User.Password, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.User.ConfirmPassword)
+        @Html.PasswordFor(m => m.User.ConfirmPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.User.ConfirmPassword, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
