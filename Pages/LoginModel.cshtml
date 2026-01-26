@@ -1,34 +1,38 @@
 ﻿@page
 @model PROEL4W.Pages.LoginModelModel
 @{
+    ViewData["Title"] = "Login";
 }
-<div class="container-border">
-	<form method="post">
-		<div class="text-danger" asp-validation-summary="ModelOnly"></div>
-		<div class="row">
-			<div class="col-2">
-				<label asp-for="Users.Username"></label>
-			</div>
-			<div class="col-4">
-				<input type="Text" asp-for="Users.Username" class="form-control" />
-				<span class="text-danger" asp-validation-for="Users.Username"></span>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-2">
-				<label asp-for="Users.Password"></label>
-			</div>
-			<div class="col-4">
-				<input type="Text" asp-for="Users.Password" class="form-control" />
-				<span class="text-danger" asp-validation-for="Users.Password"></span>
-			</div>
-		</div>
-		<div class="row padding:5px;">
-			<div class="col-2" style="padding:5px;">
-				</>
-				<div>
-					<input type="submit" class="btn tbn-primary" />
-				</div>
-		</div>
-	</form>
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-lg border-0" style="width: 100%; max-width: 400px; border-radius: 15px;">
+        <div class="card-body p-5">
+            <h2 class="text-center mb-4 fw-bold text-primary">Welcome</h2>
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger p-2" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Users.Username" class="form-control" placeholder="Username" autocomplete="username" />
+                    <label asp-for="Users.Username">Username</label>
+                    <span asp-validation-for="Users.Username" class="text-danger small"></span>
+                </div>
+
+                <div class="form-floating mb-4">
+                    <input asp-for="Users.Password" type="password" class="form-control" placeholder="Password" autocomplete="current-password" />
+                    <label asp-for="Users.Password">Password</label>
+                    <span asp-validation-for="Users.Password" class="text-danger small"></span>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg shadow-sm">Login</button>
+                </div>
+            </form>
+            <div class="text-center mt-3">
+                <a href="#" class="text-muted small text-decoration-none">Forgot password?</a>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
