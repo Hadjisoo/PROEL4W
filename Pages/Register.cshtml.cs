@@ -7,7 +7,7 @@ namespace PROEL4W.Pages
     public class RegisterModel : PageModel
     {
         [BindProperty]
-        public UserProfile User { get; set; }
+        public new required UserProfile User { get; set; }
         public void OnGet()
         {
         }

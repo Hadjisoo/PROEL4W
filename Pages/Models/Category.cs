@@ -16,7 +16,7 @@ namespace PROEL4W.Pages.Models
         [Display(Name = "Display Order")]
         public int DisplayOrder { get; set; }
 
-        [DataType(Date)]
+        [DataType(DataType.Date)]
         [Display(Name = "Created Date")]
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
 

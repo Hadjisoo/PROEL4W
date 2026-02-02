@@ -5,7 +5,7 @@ namespace PROEL4W
 {
     public class ApplicationDbContext
     {
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public required DbSet<Category> Categories { get; set; }
+        public required DbSet<Product> Products { get; set; }
     }
 }
