@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PROEL4W.Pages.Profile;
+using PROEL4W.Models;
 
 namespace PROEL4W.Pages
 {
     public class LoginModelModel : PageModel
     {
         [BindProperty]
-        public Users Users { get; set; } = new Users();
+        public Users Users { get; set; } = new Users { Username = string.Empty, Password = string.Empty };
 
         public IActionResult OnPost()
         {

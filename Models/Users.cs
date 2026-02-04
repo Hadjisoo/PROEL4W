@@ -1,4 +1,4 @@
-﻿namespace PROEL4W.Pages.Profile
+﻿namespace PROEL4W.Models
 {
     public class Users
     {

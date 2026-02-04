@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PROEL4W.Pages.Profile;
+using PROEL4W.Models;
 
 namespace PROEL4W.Pages
 {

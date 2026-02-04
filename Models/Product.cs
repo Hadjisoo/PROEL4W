@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PROEL4W.Pages.Models
+namespace PROEL4W.Models
 {
     public class Product
     {

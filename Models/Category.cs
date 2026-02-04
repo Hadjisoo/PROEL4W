@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace PROEL4W.Pages.Models
+namespace PROEL4W.Models
 {
     public class Category
     {

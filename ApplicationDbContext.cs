@@ -1,4 +1,4 @@
-﻿using PROEL4W.Pages.Models;
+﻿using PROEL4W.Models;
 using System.Collections.Generic;
 
 namespace PROEL4W
