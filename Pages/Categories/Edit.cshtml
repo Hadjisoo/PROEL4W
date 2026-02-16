@@ -1,0 +1,57 @@
+﻿@page
+@model PROEL4W.Pages.Categories.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/_ViewImports.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Category</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Category.Id" />
+            <div class="form-group">
+<span class="text-danger">*</span>
+                <label asp-for="Category.Name" class="control-label"></label>
+                <input asp-for="Category.Name" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Category.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category.DisplayOrder" class="control-label"></label>
+                <input asp-for="Category.DisplayOrder" class="form-control" />
+                <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category.CreatedDateTime" class="control-label"></label>
+                <input asp-for="Category.CreatedDateTime" class="form-control" />
+                <span asp-validation-for="Category.CreatedDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Category.IsActive" /> @Html.DisplayNameFor(model => model.Category.IsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category.AdminContact" class="control-label"></label>
+                <input asp-for="Category.AdminContact" class="form-control" />
+                <span asp-validation-for="Category.AdminContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

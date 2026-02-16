@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using PROEL4W.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<PROEL4WContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PROEL4WContext") ?? throw new InvalidOperationException("Connection string 'PROEL4WContext' not found.")));
 
 var app = builder.Build();
 
